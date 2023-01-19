@@ -5,22 +5,26 @@ Sandbox module
 ## Installation
 
 ```sh
+yarn add rn-sandbox-module
+```
+
+or
+
+```sh
 npm install rn-sandbox-module
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'rn-sandbox-module';
+import { SandboxLabel } from 'rn-sandbox-module';
 
 // ...
 
-const result = await multiply(3, 7);
+<SandboxLabel />
 ```
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+Please see `example` folder for real example.
 
 ## License
 
