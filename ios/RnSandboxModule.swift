@@ -1,8 +1,7 @@
 @objc(RnSandboxModule)
 class RnSandboxModule: NSObject {
 
-  @objc(multiply:withB:withResolver:withRejecter:)
-  func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-    resolve(a*b)
+  @objc func changeText(_ value: String, onChangeText: @escaping RCTResponseSenderBlock) -> Void {
+    onChangeText([value])
   }
 }

@@ -7,6 +7,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
+import com.facebook.react.bridge.Callback;
 
 @ReactModule(name = RnSandboxModuleModule.NAME)
 public class RnSandboxModuleModule extends ReactContextBaseJavaModule {
@@ -22,11 +23,8 @@ public class RnSandboxModuleModule extends ReactContextBaseJavaModule {
     return NAME;
   }
 
-
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
-  public void multiply(double a, double b, Promise promise) {
-    promise.resolve(a * b);
+  public void changeText(String value, Callback onChangeText) {
+      onChangeText.invoke(null, value);
   }
 }

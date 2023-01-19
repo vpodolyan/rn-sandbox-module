@@ -20,3 +20,12 @@ const RnSandboxModule = NativeModules.RnSandboxModule
 export function multiply(a: number, b: number): Promise<number> {
   return RnSandboxModule.multiply(a, b);
 }
+
+export function changeText(
+  value: string,
+  onChangeText?: (value: string) => void
+) {
+  RnSandboxModule.changeText(value, onChangeText);
+}
+
+export { Label as SandboxLabel } from './Label';
